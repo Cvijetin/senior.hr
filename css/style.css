@@ -1,0 +1,39 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0; }
+
+.header-background {
+  text-align: center;
+  background-color: black; }
+
+.section-wrapper {
+  display: block;
+  padding-top: 30px;
+  overflow: hidden; }
+
+.topic-wrapper {
+  width: 50%;
+  display: inline;
+  text-align: center; }
+
+.topic-icon {
+  width: 120px; }
+
+h1 {
+  color: white;
+  padding: 20px 0px;
+  margin: 0;
+  font-size: 50px; }
+
+h2 {
+  color: black;
+  margin: 0;
+  font-size: 35px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+/*# sourceMappingURL=style.css.map */
