@@ -6,6 +6,11 @@ body {
   text-align: center;
   background-color: black; }
 
+.header-background-news {
+  display: block;
+  overflow: hidden;
+  background-color: black; }
+
 .section-wrapper {
   display: block;
   padding-top: 30px;
@@ -16,8 +21,69 @@ body {
   display: inline;
   text-align: center; }
 
+.topic-icon-wrapper {
+  margin: 0% 30%; }
+
+.topic-icon-wrapper:hover {
+  background-color: #b9b3b3;
+  border-radius: 5%;
+  cursor: pointer; }
+
 .topic-icon {
   width: 120px; }
+
+.topic-wrapper a {
+  text-decoration: none;
+  color: black; }
+
+.feed-title a {
+  text-decoration: none;
+  color: white; }
+
+.feed-title {
+  text-align: center;
+  background-color: black; }
+
+.feed-date {
+  display: none; }
+
+.feed-item {
+  display: inline-table;
+  width: 45%;
+  margin: 30px 30px;
+  overflow: hidden;
+  position: relative; }
+
+.feed-item:hover {
+  background-color: #e8e8e8;
+  opacity: 0.5; }
+
+.feed-item-image {
+  width: 100%;
+  min-height: 400px;
+  max-height: 400px;
+  display: block; }
+
+.feed-item-text {
+  position: absolute;
+  bottom: 0px;
+  margin: 0px;
+  background-color: black;
+  color: white;
+  opacity: 0.7; }
+
+.feed-description img {
+  margin: auto; }
+
+.feed-description a {
+  text-decoration: none;
+  color: white;
+  background-color: black; }
+
+.feed-description {
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 25px; }
 
 h1 {
   color: white;
@@ -30,10 +96,35 @@ h2 {
   margin: 0;
   font-size: 35px; }
 
+h3 {
+  font-size: 30px;
+  color: black;
+  margin: 0; }
+
 .left {
   float: left; }
 
 .right {
   float: right; }
+
+.inline-left {
+  display: inline-block;
+  float: left; }
+
+.inline-right {
+  display: inline-block;
+  float: right; }
+
+.back {
+  padding-top: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: white; }
+
+.back:hover {
+  color: black;
+  background-color: white;
+  border-radius: 50%; }
 
 /*# sourceMappingURL=style.css.map */
