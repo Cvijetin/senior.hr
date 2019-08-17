@@ -4,16 +4,19 @@ body {
 
 .header-background {
   text-align: center;
-  background-color: black; }
+  background-color: #3d3d3d; }
 
 .header-background-news {
   display: block;
   overflow: hidden;
-  background-color: black; }
+  padding: 0px 50px;
+  text-align: center;
+  background-color: #3d3d3d; }
 
 .section-wrapper {
   display: block;
   padding-top: 30px;
+  text-align: center;
   overflow: hidden; }
 
 .topic-wrapper {
@@ -24,7 +27,7 @@ body {
 .topic-icon-wrapper {
   margin: 0% 30%; }
 
-.topic-icon-wrapper:hover {
+.topic-icon-wrapper:hover, .news-topic-icon:hover {
   background-color: #b9b3b3;
   border-radius: 5%;
   cursor: pointer; }
@@ -34,7 +37,23 @@ body {
 
 .topic-wrapper a {
   text-decoration: none;
-  color: black; }
+  color: #3d3d3d; }
+
+.news-topic-wrapper {
+  display: block;
+  padding-top: 20px;
+  text-align: center;
+  margin: auto;
+  position: relative; }
+
+.news-topic-icon {
+  display: inline-block;
+  padding: 0px 20px; }
+
+.topic-icon {
+  color: #3d3d3d;
+  padding: 5px 5px;
+  font-size: 50px; }
 
 .feed-title a {
   text-decoration: none;
@@ -42,7 +61,7 @@ body {
 
 .feed-title {
   text-align: center;
-  background-color: black; }
+  background-color: #3d3d3d; }
 
 .feed-date {
   display: none; }
@@ -78,7 +97,7 @@ body {
 .feed-description a {
   text-decoration: none;
   color: white;
-  background-color: black; }
+  background-color: #3d3d3d; }
 
 .feed-description {
   font-family: 'Segoe UI', sans-serif;
@@ -92,13 +111,13 @@ h1 {
   font-size: 50px; }
 
 h2 {
-  color: black;
+  color: #3d3d3d;
   margin: 0;
   font-size: 35px; }
 
 h3 {
   font-size: 30px;
-  color: black;
+  color: #3d3d3d;
   margin: 0; }
 
 .left {
@@ -109,6 +128,7 @@ h3 {
 
 .inline-left {
   display: inline-block;
+  padding-top: 15px;
   float: left; }
 
 .inline-right {
@@ -116,14 +136,14 @@ h3 {
   float: right; }
 
 .back {
-  padding-top: 10px;
+  padding: 10px 10px;
   width: 50px;
   height: 50px;
-  font-size: 30px;
+  font-size: 50px;
   color: white; }
 
 .back:hover {
-  color: black;
+  color: #3d3d3d;
   background-color: white;
   border-radius: 50%; }
 

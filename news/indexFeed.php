@@ -13,12 +13,39 @@
 <body>
     <header class="header-background-news">
         <div class="inline-left">
-            <a class="left" href="landning.php"><i class="back fas fa-arrow-left"></i></a>
+            <a class="left" href="landing.php"><i class="back fas fa-arrow-left"></i></a>
         </div>
         <div class="inline-right">
             <h1>Index.hr</h1>
         </div>
     </header>
+
+    <div class="news-topic-wrapper">
+        <div class="news-topic-icon">
+            <i class="topic-icon far fa-newspaper"></i>
+            <h3>Vijesti</h3>
+        </div>
+        <div class="news-topic-icon">
+            <i class="topic-icon fas fa-globe-africa"></i>
+            <h3>Svijet</h3>
+        </div>
+        <div class="news-topic-icon">
+            <i class="topic-icon fas fa-exclamation-triangle"></i>
+            <h3>Crna kronika</h3>
+        </div>
+        <div class="news-topic-icon">
+            <i class="topic-icon far fa-futbol"></i>
+            <h3>Sport</h3>
+        </div>
+        <div class="news-topic-icon">
+            <i class="topic-icon fas fa-book-open"></i>
+            <h3>Magazin</h3>
+        </div>
+        <div class="news-topic-icon">
+            <i class="topic-icon fas fa-apple-alt"></i>
+            <h3>Zdrav život</h3>
+        </div>
+    </div>
 
     <main>
         <?php
@@ -112,7 +139,7 @@ function output_rss_feed($feed_url, $max_item_cnt = 10, $show_date = true, $show
 ?>
         <?php
 // output RSS feed to HTML
-output_rss_feed('https://www.index.hr/rss/magazin-tv-film', 20, true, true, 200);
+output_rss_feed('https://www.index.hr/rss', 20, true, true, 200);
 ?>
 
     </main>
