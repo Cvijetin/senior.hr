@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Index.hr vijesti</title>
+    <title>24 sata vijesti</title>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <script src="https://kit.fontawesome.com/5e7382c972.js"></script>
 </head>
@@ -16,19 +16,19 @@
             <a class="left" href="landing.php"><i class="back fas fa-arrow-left"></i></a>
         </div>
         <div class="inline-right">
-            <h1>Index.hr</h1>
+            <h1>24 sata</h1>
         </div>
     </header>
-    <form action="indexFeed.php" method="POST" id="date">
+    <form action="24sataFeed.php" method="POST" id="date">
         <div class="news-topic-wrapper">
             <div class="news-topic-icon">
                 <input type="submit" name="news-submit" class="icon-text" id="news" value="Vijesti">
             </div>
             <div class="news-topic-icon">
-                <input type="submit" name="world-submit" class="icon-text" id="world" value="Svijet">
+                <input type="submit" name="new-submit" class="icon-text" id="new" value="Aktualno">
             </div>
             <div class="news-topic-icon">
-                <input type="submit" name="accident-submit" class="icon-text" id="accident" value="Crna kronika">
+                <input type="submit" name="accident-submit" class="icon-text" id="accident" value="Show">
             </div>
             <div class="news-topic-icon">
                 <input type="submit" name="sport-submit" class="icon-text" id="sport" value="Sport">
@@ -37,7 +37,7 @@
                 <input type="submit" name="magazine-submit" class="icon-text" id="magazine" value="Magazin">
             </div>
             <div class="news-topic-icon">
-                <input type="submit" name="health-submit" class="icon-text" id="health" value="Zdrav život">
+                <input type="submit" name="health-submit" class="icon-text" id="health" value="Tehnologija">
             </div>
         </div>
     </form>
@@ -134,26 +134,26 @@ function output_rss_feed($feed_url, $max_item_cnt = 10, $show_date = true, $show
         <?php
 
 $submitNews = isset($_POST["news-submit"]) ? $_POST["news-submit"] : "";
-$submitWorld = isset($_POST["world-submit"]) ? $_POST["world-submit"] : "";
+$submitWorld = isset($_POST["new-submit"]) ? $_POST["new-submit"] : "";
 $submitAccident = isset($_POST["accident-submit"]) ? $_POST["accident-submit"] : "";
 $submitSport = isset($_POST["sport-submit"]) ? $_POST["sport-submit"] : "";
 $submitMagazine = isset($_POST["magazine-submit"]) ? $_POST["magazine-submit"] : "";
 $submitHealth = isset($_POST["health-submit"]) ? $_POST["health-submit"] : "";
 
 if ($submitNews == 'Vijesti') {
-    output_rss_feed('https://www.index.hr/rss/vijesti', 20, true, true, 200);
-}elseif ($submitWorld == 'Svijet') {
-    output_rss_feed('https://www.index.hr/rss/vijesti-svijet', 20, true, true, 200);
-}elseif ($submitAccident == 'Crna kronika') {
-    output_rss_feed('https://www.index.hr/rss/vijesti-crna-kronika', 20, true, true, 200);
+    output_rss_feed('http://www.24sata.hr/feeds/news.xml', 20, true, true, 200);
+}elseif ($submitWorld == 'Akutalno') {
+    output_rss_feed('http://www.24sata.hr/feeds/aktualno.xml', 20, true, true, 200);
+}elseif ($submitAccident == 'Show') {
+    output_rss_feed('http://www.24sata.hr/feeds/show.xml', 20, true, true, 200);
 }elseif ($submitSport == 'Sport') {
-    output_rss_feed('https://www.index.hr/rss/sport', 20, true, true, 200);
+    output_rss_feed('http://www.24sata.hr/feeds/sport.xml', 20, true, true, 200);
 }elseif ($submitMagazine == 'Magazin') {
-    output_rss_feed('https://www.index.hr/rss/magazin', 20, true, true, 200);
-}elseif ($submitHealth == 'Zdrav život') {
-    output_rss_feed('https://www.index.hr/rss/fit', 20, true, true, 200);
+    output_rss_feed('http://www.24sata.hr/feeds/lifestyle.xml', 20, true, true, 200);
+}elseif ($submitHealth == 'Tehnologija') {
+    output_rss_feed('http://www.24sata.hr/feeds/tech.xml', 20, true, true, 200);
 }else {
-    output_rss_feed('https://www.index.hr/rss', 20, true, true, 200);
+    output_rss_feed('http://www.24sata.hr/feeds/najnovije.xml', 20, true, true, 200);
 }
 
 ?>

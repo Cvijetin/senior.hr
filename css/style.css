@@ -4,14 +4,14 @@ body {
 
 .header-background {
   text-align: center;
-  background-color: #3d3d3d; }
+  background-color: black; }
 
 .header-background-news {
   display: block;
   overflow: hidden;
   padding: 0px 50px;
   text-align: center;
-  background-color: #3d3d3d; }
+  background-color: black; }
 
 .section-wrapper {
   display: block;
@@ -22,12 +22,13 @@ body {
 .topic-wrapper {
   width: 50%;
   display: inline;
-  text-align: center; }
+  text-align: center;
+  position: relative; }
 
 .topic-icon-wrapper {
   margin: 0% 30%; }
 
-.topic-icon-wrapper:hover, .news-topic-icon:hover {
+.topic-icon-wrapper:hover {
   background-color: #b9b3b3;
   border-radius: 5%;
   cursor: pointer; }
@@ -37,7 +38,7 @@ body {
 
 .topic-wrapper a {
   text-decoration: none;
-  color: #3d3d3d; }
+  color: black; }
 
 .news-topic-wrapper {
   display: block;
@@ -51,7 +52,7 @@ body {
   padding: 0px 20px; }
 
 .topic-icon {
-  color: #3d3d3d;
+  color: black;
   padding: 5px 5px;
   font-size: 50px; }
 
@@ -61,7 +62,29 @@ body {
 
 .feed-title {
   text-align: center;
-  background-color: #3d3d3d; }
+  background-color: black; }
+
+.icon-text {
+  display: block;
+  margin: auto;
+  border-radius: 15px;
+  color: white;
+  border: none;
+  height: 110px;
+  background: black;
+  font-size: 25px;
+  outline: none;
+  width: 200px;
+  font-weight: 800; }
+
+.news-feed-title {
+  width: 50%;
+  padding: 80px;
+  margin: auto; }
+
+.icon-text:hover {
+  cursor: pointer;
+  opacity: 0.5; }
 
 .feed-date {
   display: none; }
@@ -89,7 +112,8 @@ body {
   margin: 0px;
   background-color: black;
   color: white;
-  opacity: 0.7; }
+  font-weight: 700;
+  opacity: 0.8; }
 
 .feed-description img {
   margin: auto; }
@@ -97,7 +121,7 @@ body {
 .feed-description a {
   text-decoration: none;
   color: white;
-  background-color: #3d3d3d; }
+  background-color: black; }
 
 .feed-description {
   font-family: 'Segoe UI', sans-serif;
@@ -111,14 +135,31 @@ h1 {
   font-size: 50px; }
 
 h2 {
-  color: #3d3d3d;
+  color: black;
   margin: 0;
   font-size: 35px; }
 
 h3 {
   font-size: 30px;
-  color: #3d3d3d;
+  color: black;
   margin: 0; }
+
+h4 {
+  font-size: 50px;
+  color: white;
+  margin: 0; }
+
+.red {
+  background: #eb1e25; }
+
+.grey {
+  background: darkgray; }
+
+.orange {
+  background: #f89d1c; }
+
+.blue {
+  background: #4423c2; }
 
 .left {
   float: left; }
@@ -143,7 +184,7 @@ h3 {
   color: white; }
 
 .back:hover {
-  color: #3d3d3d;
+  color: black;
   background-color: white;
   border-radius: 50%; }
 

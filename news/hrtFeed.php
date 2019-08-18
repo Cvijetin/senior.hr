@@ -19,25 +19,22 @@
             <h1>Index.hr</h1>
         </div>
     </header>
-    <form action="indexFeed.php" method="POST" id="date">
+    <form action="hrtFeed.php" method="POST" id="date">
         <div class="news-topic-wrapper">
             <div class="news-topic-icon">
                 <input type="submit" name="news-submit" class="icon-text" id="news" value="Vijesti">
             </div>
             <div class="news-topic-icon">
-                <input type="submit" name="world-submit" class="icon-text" id="world" value="Svijet">
+                <input type="submit" name="world-submit" class="icon-text" id="world" value="Glazba">
             </div>
             <div class="news-topic-icon">
-                <input type="submit" name="accident-submit" class="icon-text" id="accident" value="Crna kronika">
+                <input type="submit" name="accident-submit" class="icon-text" id="accident" value="HRT prikazuje">
             </div>
             <div class="news-topic-icon">
                 <input type="submit" name="sport-submit" class="icon-text" id="sport" value="Sport">
             </div>
             <div class="news-topic-icon">
                 <input type="submit" name="magazine-submit" class="icon-text" id="magazine" value="Magazin">
-            </div>
-            <div class="news-topic-icon">
-                <input type="submit" name="health-submit" class="icon-text" id="health" value="Zdrav život">
             </div>
         </div>
     </form>
@@ -141,19 +138,17 @@ $submitMagazine = isset($_POST["magazine-submit"]) ? $_POST["magazine-submit"] :
 $submitHealth = isset($_POST["health-submit"]) ? $_POST["health-submit"] : "";
 
 if ($submitNews == 'Vijesti') {
-    output_rss_feed('https://www.index.hr/rss/vijesti', 20, true, true, 200);
-}elseif ($submitWorld == 'Svijet') {
-    output_rss_feed('https://www.index.hr/rss/vijesti-svijet', 20, true, true, 200);
-}elseif ($submitAccident == 'Crna kronika') {
-    output_rss_feed('https://www.index.hr/rss/vijesti-crna-kronika', 20, true, true, 200);
+    output_rss_feed('https://www.hrt.hr/rss/vijesti/', 20, true, true, 200);
+}elseif ($submitWorld == 'Glazba') {
+    output_rss_feed('https://www.hrt.hr/rss/glazba/', 20, true, true, 200);
+}elseif ($submitAccident == 'HRT prikazuje') {
+    output_rss_feed('https://www.hrt.hr/rss/hrtprikazuje/', 20, true, true, 200);
 }elseif ($submitSport == 'Sport') {
-    output_rss_feed('https://www.index.hr/rss/sport', 20, true, true, 200);
+    output_rss_feed('https://www.hrt.hr/rss/sport/', 20, true, true, 200);
 }elseif ($submitMagazine == 'Magazin') {
-    output_rss_feed('https://www.index.hr/rss/magazin', 20, true, true, 200);
-}elseif ($submitHealth == 'Zdrav život') {
-    output_rss_feed('https://www.index.hr/rss/fit', 20, true, true, 200);
+    output_rss_feed('https://www.hrt.hr/rss/blogovi/', 20, true, true, 200);
 }else {
-    output_rss_feed('https://www.index.hr/rss', 20, true, true, 200);
+    output_rss_feed('https://www.hrt.hr/rss/vijesti/', 20, true, true, 200);
 }
 
 ?>
