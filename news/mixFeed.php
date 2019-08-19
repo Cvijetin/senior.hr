@@ -16,25 +16,28 @@
             <a class="left" href="landing.php"><i class="back fas fa-arrow-left"></i></a>
         </div>
         <div class="inline-right">
-            <h1>HRT</h1>
+            <h1>Ostali portali</h1>
         </div>
     </header>
-    <form action="hrtFeed.php" method="POST" id="date">
+    <form action="mixFeed.php" method="POST" id="date">
         <div class="news-topic-wrapper">
             <div class="news-topic-icon">
-                <input type="submit" name="news-submit" class="icon-text" id="news" value="Vijesti">
+                <input type="submit" name="news-submit" class="icon-text" id="news" value="Jutarnji.hr">
             </div>
             <div class="news-topic-icon">
-                <input type="submit" name="world-submit" class="icon-text" id="world" value="Glazba">
+                <input type="submit" name="world-submit" class="icon-text" id="world" value="Večernji.hr">
             </div>
             <div class="news-topic-icon">
-                <input type="submit" name="accident-submit" class="icon-text" id="accident" value="HRT prikazuje">
+                <input type="submit" name="accident-submit" class="icon-text" id="accident" value="Vlada.hr">
             </div>
             <div class="news-topic-icon">
-                <input type="submit" name="sport-submit" class="icon-text" id="sport" value="Sport">
+                <input type="submit" name="sport-submit" class="icon-text" id="sport" value="Net.hr">
             </div>
             <div class="news-topic-icon">
-                <input type="submit" name="magazine-submit" class="icon-text" id="magazine" value="Magazin">
+                <input type="submit" name="magazine-submit" class="icon-text" id="magazine" value="Mirovina.hr">
+            </div>
+            <div class="news-topic-icon">
+                <input type="submit" name="health-submit" class="icon-text" id="health" value="Zdravlje.hr">
             </div>
         </div>
     </form>
@@ -64,7 +67,7 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
             'desc' => $node->getElementsByTagName('description')->item(0)->nodeValue,
             'content' => $node->getElementsByTagName('description')->item(0)->nodeValue,
             'link' => $node->getElementsByTagName('link')->item(0)->nodeValue,
-            'date' => $node->getElementsByTagName('pubDate')->item(0)->nodeValue,
+            // 'date' => $node->getElementsByTagName('pubDate')->item(0)->nodeValue,
         );
         $content = $node->getElementsByTagName('encoded'); // <content:encoded>
         if ($content->length > 0) {
@@ -80,12 +83,12 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
     for ($x=0;$x<$max_item_cnt;$x++) {
         $title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
         $link = $feed[$x]['link'];
-        $result .= '<div class="feed-item">';
+        $result .= '<div class="feed-item border">';
         $result .= '<div class="feed-title"><h3><a href="'.$link.'" title="'.$title.'" target="_blank">'.$title.'</a></h3></div>';
-        if ($show_date) {
-            $date = date('F d, Y', strtotime($feed[$x]['date']));
-            $result .= '<small class="feed-date"><em> '.$date.'</em></small>';
-        }
+        // if ($show_date) {
+        //     $date = date('F d, Y', strtotime($feed[$x]['date']));
+        //     $result .= '<small class="feed-date"><em> '.$date.'</em></small>';
+        // }
         if ($show_description) {
             $description = $feed[$x]['desc'];
             $content = $feed[$x]['content'];
@@ -110,10 +113,10 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
                 }
             }
             // add img if it exists
-            if ($has_image == 1) {
-                $description = '<a href="'.$link.'" title="'.$title.'" target="_blank"><img class="feed-item-image" src="' . $image['src'] . '" />' . '<p class="feed-item-text">'. $description . '</p></a>';
-            }
-            $result .= '<div class="feed-description">' . $description;
+            // if ($has_image == 1) {
+            //     $description = '<a href="'.$link.'" title="'.$title.'" target="_blank"><img class="feed-item-image" src="' . $image['src'] . '" />' . '<p class="feed-item-text">'. $description . '</p></a>';
+            // }
+            $result .= '<a href="'.$link.'" title="'.$title.'" target="_blank"><div class="feed-description">' . $description . '</a>';
             $result .= '</div>';
         }
         $result .= '</div>';
@@ -137,18 +140,20 @@ $submitSport = isset($_POST["sport-submit"]) ? $_POST["sport-submit"] : "";
 $submitMagazine = isset($_POST["magazine-submit"]) ? $_POST["magazine-submit"] : "";
 $submitHealth = isset($_POST["health-submit"]) ? $_POST["health-submit"] : "";
 
-if ($submitNews == 'Vijesti') {
-    output_rss_feed('https://www.hrt.hr/rss/vijesti/', 20, true, true, 200);
-}elseif ($submitWorld == 'Glazba') {
-    output_rss_feed('https://www.hrt.hr/rss/glazba/', 20, true, true, 200);
-}elseif ($submitAccident == 'HRT prikazuje') {
-    output_rss_feed('https://www.hrt.hr/rss/hrtprikazuje/', 20, true, true, 200);
-}elseif ($submitSport == 'Sport') {
-    output_rss_feed('https://www.hrt.hr/rss/sport/', 20, true, true, 200);
-}elseif ($submitMagazine == 'Magazin') {
-    output_rss_feed('https://www.hrt.hr/rss/blogovi/', 20, true, true, 200);
+if ($submitNews == 'Jutarnji.hr') {
+    output_rss_feed('https://www.jutarnji.hr/rss/vijesti/', 20, true, true, 200);
+}elseif ($submitWorld == 'Večernji.hr') {
+    output_rss_feed('https://www.vecernji.hr/feeds/latest', 20, true, true, 200);
+}elseif ($submitAccident == 'Vlada.hr') {
+    output_rss_feed('https://vlada.gov.hr/rss.aspx?ID=8', 20, true, true, 200);
+}elseif ($submitSport == 'Net.hr') {
+    output_rss_feed('http://net.hr/feed/', 20, true, true, 200);
+}elseif ($submitMagazine == 'Mirovina.hr') {
+    output_rss_feed('https://www.mirovina.hr/feed/', 20, true, true, 200);
+}elseif ($submitHealth == 'Zdravlje.hr') {
+    output_rss_feed('https://www.centarzdravlja.hr/rss/rss-zdrav-zivot/', 20, true, true, 200);
 }else {
-    output_rss_feed('https://www.hrt.hr/rss/vijesti/', 20, true, true, 200);
+    output_rss_feed('https://www.index.hr/rss', 20, true, true, 200);
 }
 
 ?>
