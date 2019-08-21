@@ -24,10 +24,12 @@
                 </a>
             </div>
             <div class="topic-wrapper right">
-                <div class="topic-icon-wrapper">
-                    <img src="assets/weather.svg" class="topic-icon" alt="Vrijeme">
-                    <h2>Vrijeme</h2>
-                </div>
+                <a href="weather/weather.php">
+                    <div class="topic-icon-wrapper">
+                        <img src="assets/weather.svg" class="topic-icon" alt="Vrijeme">
+                        <h2>Vrijeme</h2>
+                    </div>
+                </a>
             </div>
         </section>
         <section class="section-wrapper">
