@@ -1,7 +1,7 @@
 <?php
 $apiKey = "122408c2c326fe8986353bd4f8be829a";
 $cityId = "3193935";
-$googleApiUrl = "http://api.openweathermap.org/data/2.5/weather?id=" . $cityId . "&units=metric&cnt=5&appid=" . $apiKey;
+$googleApiUrl = "http://api.openweathermap.org/data/2.5/forecast?id=" . $cityId . "&units=metric&appid=" . $apiKey;
 
 $ch = curl_init();
 
@@ -16,6 +16,8 @@ $response = curl_exec($ch);
 curl_close($ch);
 $data = json_decode($response);
 $currentTime = time();
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -40,24 +42,35 @@ $currentTime = time();
     </header>
 
     <main>
-        <div class="report-container">
-            <h2><?php echo $data->name; ?></h2>
-            <div class="time">
-                <div><?php echo date("l g:i a", $currentTime); ?></div>
-                <div><?php echo date("jS F, Y",$currentTime); ?></div>
-                <div><?php echo ucwords($data->weather[0]->description); ?></div>
-            </div>
-            <div class="weather-forecast">
-                <img src="http://openweathermap.org/img/w/<?php echo $data->weather[0]->icon; ?>.png"
-                    class="weather-icon" /> <?php echo $data->main->temp_max; ?>°C<span
-                    class="min-temperature"><?php echo $data->main->temp_min; ?>°C</span>
-            </div>
-            <div class="time">
-                <div>Vlažnost zraka: <?php echo $data->main->humidity; ?> %</div>
-                <div>Vjetar: <?php echo $data->wind->speed; ?> km/h</div>
-            </div>
-        </div>
+
     </main>
+
+ 
+
+
+
+<div class="vrijeme">
+<?php
+foreach ($data->list as $value) {
+
+    echo "<p>" . $value->main->temp . "</p>" . "</br>";
+
+    foreach ($value->weather as $vrijeme) {
+        echo "<p>" . $vrijeme->description . "</p>" . "</br>";
+       echo "<img src='http://openweathermap.org/img/w/" . $vrijeme->icon . ".png'";
+    }
+
+    echo "<p>" . $value->dt_txt . "</p>" . "</br>";
+    echo "<hr>";
+}
+?>
+
+</div>
+
+
+
+
+
 
 </body>
 
