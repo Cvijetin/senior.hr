@@ -40,10 +40,12 @@
                 </div>
             </div>
             <div class="topic-wrapper right">
-                <div class="topic-icon-wrapper">
-                    <img src="assets/health.svg" class="topic-icon" alt="Zdravlje">
-                    <h2>Zdravlje</h2>
-                </div>
+                <a href="health.php">
+                    <div class="topic-icon-wrapper">
+                        <img src="assets/health.svg" class="topic-icon" alt="Zdravlje">
+                        <h2>Zdravlje</h2>
+                    </div>
+                </a>
             </div>
         </section>
         <section class="section-wrapper">
@@ -56,10 +58,12 @@
                 </a>
             </div>
             <div class="topic-wrapper right">
-                <div class="topic-icon-wrapper">
-                    <img src="assets/suggestion.svg" class="topic-icon" alt="Prijedlozi">
-                    <h2>Prijedlozi</h2>
-                </div>
+                <a href="form.php">
+                    <div class="topic-icon-wrapper">
+                        <img src="assets/suggestion.svg" class="topic-icon" alt="Prijedlozi">
+                        <h2>Prijedlozi</h2>
+                    </div>
+                </a>
             </div>
         </section>
     </main>
