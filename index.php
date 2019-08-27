@@ -48,10 +48,12 @@
         </section>
         <section class="section-wrapper">
             <div class="topic-wrapper left">
-                <div class="topic-icon-wrapper">
-                    <img src="assets/events.svg" class="topic-icon" alt="Događaji">
-                    <h2>Događaji</h2>
-                </div>
+                <a href="tvProgram.php">
+                    <div class="topic-icon-wrapper">
+                        <img src="assets/tv.svg" class="topic-icon" alt="TV">
+                        <h2>TV program</h2>
+                    </div>
+                </a>
             </div>
             <div class="topic-wrapper right">
                 <div class="topic-icon-wrapper">

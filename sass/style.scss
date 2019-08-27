@@ -1,1 +1,83 @@
 @import 'layout';
+
+h1 {
+    color: #dfdfdf;
+    padding: 20px 0px;
+    margin: 0;
+    font-size: 50px;
+}
+
+h2 {
+    color: black;
+    margin: 0;
+    font-size: 35px;
+}
+
+h3{
+    font-size: 36px;
+    color: black;
+    margin: 0;
+}
+
+h4{
+    font-size: 50px;
+    color: #dfdfdf;
+    margin: 0;
+}
+
+h5{
+    font-size: 24px;
+    color: black;
+    margin: 0;
+}
+
+.red{
+ background: #eb1e25;
+}
+
+.grey{
+    background: darkgray;
+}
+.orange{
+    background: #f89d1c;
+}
+
+.blue{
+    background: #4423c2;
+}
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+.inline-left{
+    display: inline-block;
+    padding-top: 15px;
+    float: left;
+}
+.inline-right{
+    display: inline-block;
+    float: right;
+}
+
+.center{
+    text-align: center;
+}
+.border{
+    border: 1px solid black;
+}
+
+.back{
+     padding: 10px 10px;
+     width: 50px;
+     height: 50px;
+     font-size: 50px;
+     color: #dfdfdf
+     }
+ .back:hover{
+     color: black;
+     background-color:#dfdfdf;
+     border-radius: 50%;
+ }

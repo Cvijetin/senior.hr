@@ -1,7 +1,11 @@
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  background: #dfdfdf; }
+  background: #fdfdfd; }
+
+main {
+  position: relative;
+  overflow: hidden; }
 
 .header-background {
   text-align: center;
@@ -113,8 +117,7 @@ body {
   margin: 0px;
   background-color: black;
   color: #dfdfdf;
-  font-weight: 700;
-  opacity: 0.8; }
+  font-weight: 700; }
 
 .feed-description img {
   margin: auto; }
@@ -128,6 +131,83 @@ body {
   font-weight: 400;
   font-size: 25px; }
 
+.weather-wrapper {
+  display: inline-block;
+  text-align: center;
+  padding: 56px 68px; }
+
+.weather-now-wrapper {
+  text-align: center;
+  background-color: lightgray;
+  padding: 102px 68px; }
+
+.weather-wrapper:hover {
+  background-color: lightgray;
+  cursor: default; }
+
+.weather-image-wrapper img {
+  width: 80px;
+  height: 80px; }
+
+#weather {
+  text-align: center;
+  margin: 10px 10px; }
+
+.weather-submit-btn {
+  font-size: 23px;
+  cursor: pointer;
+  color: white;
+  font-weight: 900;
+  background: black;
+  border: 3px solid black; }
+
+option {
+  cursor: pointer; }
+
+select {
+  outline: none;
+  cursor: pointer;
+  width: 160px;
+  font-weight: 900;
+  font-size: 25px;
+  border: 3px solid black; }
+
+.weather-description {
+  margin-top: 20px; }
+
+.mojtvprogram table {
+  width: auto !important; }
+
+.mojtvprogram h3 {
+  display: none !important; }
+
+.mojtvprogram h4 a {
+  border: 1px solid black !important;
+  padding: 24px 24px !important;
+  font-size: 26px !important;
+  color: #dfdfdf !important;
+  background: black; }
+
+.mojtvprogram h4 {
+  display: inline-block !important;
+  float: none !important; }
+
+.mojtvprogrammenu {
+  margin-top: 24px;
+  text-align: center; }
+
+.mojtvprogram table {
+  margin: 44px 0px 0px 24px !important; }
+
+.mojtvprogram td {
+  padding: 24px 32px !important;
+  border-bottom: 1px solid black !important;
+  font-size: 24px; }
+
+.tvopen a {
+  background: white !important;
+  color: black !important; }
+
 h1 {
   color: #dfdfdf;
   padding: 20px 0px;
@@ -140,13 +220,18 @@ h2 {
   font-size: 35px; }
 
 h3 {
-  font-size: 30px;
+  font-size: 36px;
   color: black;
   margin: 0; }
 
 h4 {
   font-size: 50px;
   color: #dfdfdf;
+  margin: 0; }
+
+h5 {
+  font-size: 24px;
+  color: black;
   margin: 0; }
 
 .red {
@@ -175,6 +260,9 @@ h4 {
 .inline-right {
   display: inline-block;
   float: right; }
+
+.center {
+  text-align: center; }
 
 .border {
   border: 1px solid black; }
