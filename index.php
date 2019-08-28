@@ -34,10 +34,12 @@
         </section>
         <section class="section-wrapper">
             <div class="topic-wrapper left">
-                <div class="topic-icon-wrapper">
-                    <img src="assets/taxi.svg" class="topic-icon" alt="Prijevoz">
-                    <h2>Prijevoz</h2>
-                </div>
+                <a href="transport.php">
+                    <div class="topic-icon-wrapper">
+                        <img src="assets/taxi.svg" class="topic-icon" alt="Prijevoz">
+                        <h2>Prijevoz</h2>
+                    </div>
+                </a>
             </div>
             <div class="topic-wrapper right">
                 <a href="health.php">

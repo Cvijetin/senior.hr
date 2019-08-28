@@ -1,8 +1,16 @@
 <?php
 $apiKey = "122408c2c326fe8986353bd4f8be829a";
-if(isset($_POST['submit'])){
-$cityId =  $_POST['city'];
-}else {
+if(isset($_POST['Osijek'])){
+    $cityId = 3193935;
+}elseif (isset($_POST['Zagreb'])) {
+    $cityId = 3337532;
+} elseif (isset($_POST['Rijeka'])) {
+    $cityId = 3188357;
+} elseif (isset($_POST['Split'])) {
+    $cityId = 3190261;
+} elseif (isset($_POST['Dubrovnik'])) {
+    $cityId = 3201047;
+} else {
     $cityId = 3193935;
 }
 $googleApiUrl = "http://api.openweathermap.org/data/2.5/forecast?id=" . $cityId . "&units=metric&appid=" . $apiKey . "&cnt=15";
@@ -60,14 +68,23 @@ $data2 = json_decode($response2);
         </div>
     </header>
     <form action="weather.php" method="POST" id="weather">
-        <select name="city">
-            <option value="3193935">Osijek</option>
-            <option value="3337532">Zagreb</option>
-            <option value="3188357">Rijeka</option>
-            <option value="3190261">Split</option>
-            <option value="3201047">Dubrovnik</option>
-        </select>
-        <input type="submit" class="weather-submit-btn" name="submit" value="Odaberi" />
+        <div class="news-topic-wrapper">
+            <div class="news-topic-icon">
+                <input type="submit" name="Osijek" class="icon-text" id="news" value="Osijek">
+            </div>
+            <div class="news-topic-icon">
+                <input type="submit" name="Zagreb" class="icon-text" id="new" value="Zagreb">
+            </div>
+            <div class="news-topic-icon">
+                <input type="submit" name="Rijeka" class="icon-text" id="accident" value="Rijeka">
+            </div>
+            <div class="news-topic-icon">
+                <input type="submit" name="Split" class="icon-text" id="sport" value="Split">
+            </div>
+            <div class="news-topic-icon">
+                <input type="submit" name="Dubrovnik" class="icon-text" id="magazine" value="Dubrovnik">
+            </div>
+        </div>
     </form>
 
     <?php

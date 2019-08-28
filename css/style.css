@@ -208,6 +208,31 @@ select {
   background: white !important;
   color: black !important; }
 
+.transport-wrapper {
+  margin: 24px;
+  text-align: center;
+  overflow: hidden;
+  display: block; }
+
+.transport-type {
+  margin: 0px 72px;
+  display: inline-table; }
+
+.transport-icon-wrapper {
+  margin: 10px 10px; }
+
+.transport-text-wrapper {
+  background: darkgrey;
+  padding: 22px;
+  border-radius: 10px;
+  margin-top: 32px; }
+
+.transport-text {
+  font-size: 20px;
+  color: black;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 700; }
+
 input[type=text], input[type=email], textarea {
   width: 100%;
   padding: 28px;
@@ -270,6 +295,9 @@ label {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0; } }
+a {
+  text-decoration: none !important; }
+
 h1 {
   color: #dfdfdf;
   padding: 20px 0px;
