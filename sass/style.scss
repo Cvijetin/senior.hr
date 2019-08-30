@@ -18,7 +18,8 @@ h2 {
 }
 
 h3{
-    font-size: 36px;
+    font-size: 28px;
+    font-weight: 900;
     color: black;
     margin: 0;
 }
@@ -36,18 +37,18 @@ h5{
 }
 
 .red{
- background: #eb1e25;
+ background: #a03337;
 }
 
 .grey{
     background: darkgray;
 }
 .orange{
-    background: #f89d1c;
+    background: #c18836;
 }
 
 .blue{
-    background: #4423c2;
+    background: #32226ddb;
 }
 .left {
     float: left;
@@ -70,7 +71,9 @@ h5{
     text-align: center;
 }
 .border{
-    border: 1px solid black;
+    -moz-box-shadow-bottom: 4px 4px 4px black;
+    -webkit-box-shadow-bottom: 4px 4px 4px black;
+    box-shadow: 4px 4px 4px black;
 }
 
 .back{
@@ -84,4 +87,9 @@ h5{
      color: black;
      background-color:#dfdfdf;
      border-radius: 50%;
+ }
+
+ hr{
+    border: 2px solid black;
+    margin: 5px 0px 24px 0px;
  }

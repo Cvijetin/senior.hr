@@ -84,7 +84,7 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
         $title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
         $link = $feed[$x]['link'];
         $result .= '<div class="feed-item border">';
-        $result .= '<div class="feed-title"><h3><a href="'.$link.'" title="'.$title.'" target="_blank">'.$title.'</a></h3></div>';
+       // $result .= '<div class="feed-title"><h3><a href="'.$link.'" title="'.$title.'" target="_blank">'.$title.'</a></h3></div>';
         // if ($show_date) {
         //     $date = date('F d, Y', strtotime($feed[$x]['date']));
         //     $result .= '<small class="feed-date"><em> '.$date.'</em></small>';
@@ -116,7 +116,7 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
             // if ($has_image == 1) {
             //     $description = '<a href="'.$link.'" title="'.$title.'" target="_blank"><img class="feed-item-image" src="' . $image['src'] . '" />' . '<p class="feed-item-text">'. $description . '</p></a>';
             // }
-            $result .= '<a href="'.$link.'" title="'.$title.'" target="_blank"><div class="feed-description">' . $description . '</a>';
+            $result .= '<a href="'.$link.'" title="'.$title.'" target="_blank"><div class="feed-title"><h3>'.$title.'</h3></div><hr/><div class="feed-description">' . $description . '</a>';
             $result .= '</div>';
         }
         $result .= '</div>';
@@ -153,7 +153,7 @@ if ($submitNews == 'Jutarnji.hr') {
 }elseif ($submitHealth == 'Zdravlje.hr') {
     output_rss_feed('https://www.centarzdravlja.hr/rss/rss-zdrav-zivot/', 20, true, true, 200);
 }else {
-    output_rss_feed('https://www.index.hr/rss', 20, true, true, 200);
+    output_rss_feed('https://www.jutarnji.hr/rss/vijesti/', 20, true, true, 200);
 }
 
 ?>

@@ -39,7 +39,7 @@
         </div>
     </form>
     <main>
-        <?php
+    <?php
 function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, $show_description = true, $max_words = 0, $cache_timeout = 7200, $cache_prefix = "")
 {
     $result = "";
@@ -81,7 +81,7 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
         $title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
         $link = $feed[$x]['link'];
         $result .= '<div class="feed-item">';
-        $result .= '<div class="feed-title"><h3><a href="'.$link.'" title="'.$title.'" target="_blank">'.$title.'</a></h3></div>';
+        
         if ($show_date) {
             $date = date('F d, Y', strtotime($feed[$x]['date']));
             $result .= '<small class="feed-date"><em> '.$date.'</em></small>';
@@ -111,10 +111,11 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
             }
             // add img if it exists
             if ($has_image == 1) {
-                $description = '<a href="'.$link.'" title="'.$title.'" target="_blank"><img class="feed-item-image" src="' . $image['src'] . '" />' . '<p class="feed-item-text">'. $description . '</p></a>';
+                $description = '<a href="'.$link.'" title="'.$title.'" target="_blank"><img class="feed-item-image" src="' . $image['src'] . '" />' . '<div class="feed-title"><h3>'.$title.'</h3></div><hr/>' . '<p class="feed-item-text">'. $description . '</p></a>';
             }
             $result .= '<div class="feed-description">' . $description;
             $result .= '</div>';
+            
         }
         $result .= '</div>';
     }

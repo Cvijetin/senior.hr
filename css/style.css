@@ -66,8 +66,8 @@ main {
   color: #dfdfdf; }
 
 .feed-title {
-  text-align: center;
-  background-color: black; }
+  padding-top: 24px;
+  text-align: left; }
 
 .icon-text {
   display: block;
@@ -82,22 +82,25 @@ main {
   width: 200px;
   font-weight: 800; }
 
+.icon-text:hover {
+  cursor: pointer;
+  opacity: 0.5; }
+
 .news-feed-title {
   width: 50%;
   padding: 80px;
   margin: auto; }
 
-.icon-text:hover {
-  cursor: pointer;
-  opacity: 0.5; }
+.news-feed-title:hover {
+  background: black; }
 
 .feed-date {
   display: none; }
 
 .feed-item {
   display: inline-table;
-  width: 45%;
-  margin: 30px 30px;
+  width: 30%;
+  margin: 1.5% 1.5%;
   overflow: hidden;
   position: relative; }
 
@@ -107,26 +110,28 @@ main {
 
 .feed-item-image {
   width: 100%;
-  min-height: 400px;
-  max-height: 400px;
+  min-height: 350px;
+  max-height: 350px;
   display: block; }
 
 .feed-item-text {
-  position: absolute;
+  text-align: left;
   bottom: 0px;
   margin: 0px;
-  background-color: black;
-  color: #dfdfdf;
-  font-weight: 700; }
+  color: black;
+  font-weight: 300; }
 
 .feed-description img {
   margin: auto; }
 
 .feed-description a {
+  text-align: left;
   text-decoration: none;
   color: black; }
 
 .feed-description {
+  padding-bottom: 20px;
+  text-align: left;
   font-family: 'Segoe UI', sans-serif;
   font-weight: 400;
   font-size: 25px; }
@@ -233,6 +238,9 @@ select {
   font-family: 'Segoe UI', sans-serif;
   font-weight: 700; }
 
+@media only screen and (max-width: 1464px) {
+  body {
+    display: none; } }
 input[type=text], input[type=email], textarea {
   width: 100%;
   padding: 28px;
@@ -310,7 +318,8 @@ h2 {
   font-size: 35px; }
 
 h3 {
-  font-size: 36px;
+  font-size: 28px;
+  font-weight: 900;
   color: black;
   margin: 0; }
 
@@ -325,16 +334,16 @@ h5 {
   margin: 0; }
 
 .red {
-  background: #eb1e25; }
+  background: #a03337; }
 
 .grey {
   background: darkgray; }
 
 .orange {
-  background: #f89d1c; }
+  background: #c18836; }
 
 .blue {
-  background: #4423c2; }
+  background: #32226ddb; }
 
 .left {
   float: left; }
@@ -355,7 +364,9 @@ h5 {
   text-align: center; }
 
 .border {
-  border: 1px solid black; }
+  -moz-box-shadow-bottom: 4px 4px 4px black;
+  -webkit-box-shadow-bottom: 4px 4px 4px black;
+  box-shadow: 4px 4px 4px black; }
 
 .back {
   padding: 10px 10px;
@@ -368,5 +379,9 @@ h5 {
   color: black;
   background-color: #dfdfdf;
   border-radius: 50%; }
+
+hr {
+  border: 2px solid black;
+  margin: 5px 0px 24px 0px; }
 
 /*# sourceMappingURL=style.css.map */
