@@ -116,7 +116,7 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
             // if ($has_image == 1) {
             //     $description = '<a href="'.$link.'" title="'.$title.'" target="_blank"><img class="feed-item-image" src="' . $image['src'] . '" />' . '<p class="feed-item-text">'. $description . '</p></a>';
             // }
-            $result .= '<a href="'.$link.'" title="'.$title.'" target="_blank"><div class="feed-title"><h3>'.$title.'</h3></div><hr/><div class="feed-description">' . $description . '</a>';
+            $result .= '<a href="'.$link.'"  target="_blank"><div class="feed-title"><h3>'.$title.'</h3></div><hr/><div class="feed-description">' . $description . '</a>';
             $result .= '</div>';
         }
         $result .= '</div>';

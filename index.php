@@ -13,7 +13,7 @@
     <header class="header-background">
         <h1>senior.hr</h1>
     </header>
-    <main>
+    <main class="index-layout">
         <section class="section-wrapper">
             <div class="topic-wrapper left">
                 <a href="news/landing.php">

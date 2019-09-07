@@ -111,7 +111,7 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
             }
             // add img if it exists
             if ($has_image == 1) {
-                $description = '<a href="'.$link.'" title="'.$title.'" target="_blank"><img class="feed-item-image" src="' . $image['src'] . '" />' . '<div class="feed-title"><h3>'.$title.'</h3></div><hr/>' . '<p class="feed-item-text">'. $description . '</p></a>';
+                $description = '<a href="'.$link.'" target="_blank"><img class="feed-item-image" src="' . $image['src'] . '" />' . '<div class="feed-title"><h3>'.$title.'</h3></div><hr/>' . '<p class="feed-item-text">'. $description . '</p></a>';
             }
             $result .= '<div class="feed-description">' . $description;
             $result .= '</div>';

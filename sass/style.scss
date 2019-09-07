@@ -5,14 +5,14 @@ a{
     text-decoration: none !important;
 }
 h1 {
-    color: #dfdfdf;
+    color: #e8e8e8;
     padding: 20px 0px;
     margin: 0;
     font-size: 50px;
 }
 
 h2 {
-    color: black;
+    color: #145374;
     margin: 0;
     font-size: 35px;
 }
@@ -20,20 +20,21 @@ h2 {
 h3{
     font-size: 28px;
     font-weight: 900;
-    color: black;
+    color: #145374;
     margin: 0;
 }
 
 h4{
     font-size: 50px;
-    color: #dfdfdf;
+    color: #e8e8e8;
     margin: 0;
 }
 
 h5{
-    font-size: 24px;
+    font-size: 32px;
     color: black;
     margin: 0;
+    font-weight: 400;
 }
 
 .red{
@@ -48,7 +49,7 @@ h5{
 }
 
 .blue{
-    background: #32226ddb;
+    background: #145374;
 }
 .left {
     float: left;
@@ -71,9 +72,8 @@ h5{
     text-align: center;
 }
 .border{
-    -moz-box-shadow-bottom: 4px 4px 4px black;
-    -webkit-box-shadow-bottom: 4px 4px 4px black;
-    box-shadow: 4px 4px 4px black;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
 }
 
 .back{
@@ -81,15 +81,15 @@ h5{
      width: 50px;
      height: 50px;
      font-size: 50px;
-     color: #dfdfdf
+     color: #e8e8e8
      }
  .back:hover{
-     color: black;
-     background-color:#dfdfdf;
+     color: #145374;
+     background-color:#e8e8e8;
      border-radius: 50%;
  }
 
  hr{
-    border: 2px solid black;
+    border: 1px solid black;
     margin: 5px 0px 24px 0px;
  }

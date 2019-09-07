@@ -1,8 +1,9 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: #fdfdfd;
+    background: #e8e8e8;
 }
+
 
 main{
     position: relative;
@@ -10,7 +11,7 @@ main{
 }
 .header-background {
     text-align: center;
-    background-color: black;
+    background-color: #145374;
 }
 
 .header-background-news{
@@ -18,12 +19,12 @@ main{
     overflow: hidden;
     padding: 0px 50px;
     text-align: center;
-    background-color: black;
+    background-color: #145374;
 }
 
 .section-wrapper {
     display: block;
-    padding-top: 30px;
+    padding-top: 10px;
     text-align: center;
     overflow: hidden;
 }
@@ -36,11 +37,13 @@ main{
 }
 
 .topic-icon-wrapper{
+    padding: 10px;
     margin: 0% 30%;
 }
 
 .topic-icon-wrapper:hover {
-     background-color: rgb(185, 179, 179);
+     background-color: rgb(199, 198, 198);
+    transform: scale(1.03);
      border-radius: 5%;
      cursor: pointer;
  }
@@ -57,7 +60,7 @@ main{
 
 .news-topic-wrapper{
     display: block;
-    padding-top: 20px;
+    padding-top: 5px;
     text-align: center;
     margin: auto;
     position: relative;
@@ -65,7 +68,7 @@ main{
 
 .news-topic-icon{
 display: inline-block;
-padding: 0px 20px;
+padding: 0px 5px;
 }
 
 .topic-icon{
@@ -75,7 +78,7 @@ padding: 0px 20px;
 }
 .feed-title a{
     text-decoration: none;
-    color: #dfdfdf;
+    color: #e8e8e8;
 }
 .feed-title{
     padding-top: 24px;
@@ -85,14 +88,14 @@ padding: 0px 20px;
 .icon-text{
     display: block;
     margin: auto;
-    border-radius: 15px;
-    color: #dfdfdf;
+    border-radius: 5px;
+    color: #e8e8e8;
     border: none;
     height: 110px;
-    background: black;
-    font-size: 25px;
+    background: #145374;
+    font-size: 20px;
     outline: none;
-    width: 200px;
+    width: 180px;
     font-weight: 800;
 }
 
@@ -109,7 +112,7 @@ padding: 0px 20px;
 }
 
 .news-feed-title:hover{
-    background: black;
+    opacity: 0.5;
 }
 
 .feed-date{
@@ -125,22 +128,27 @@ padding: 0px 20px;
 
 .feed-item:hover{
   background-color: #e8e8e8;
-  opacity: 0.5;
+   opacity: 0.8;
+   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+//   box-shadow: 2px 7px rgb(199, 198, 198);
+  transform: scale(1.03);
 }
 
 .feed-item-image{
     width: 100%;
-    min-height: 350px;
-    max-height: 350px;
+    height: auto;
+    min-height: 260px;
+    max-height: 260px;
     display: block;
     
 }
 .feed-item-text{
     text-align: left;
-    bottom: 0px;   
-    margin: 0px; 
+    bottom: 0px;
+    font-size: 25px;
+    margin: 0px;
     color: black;
-    font-weight: 300;
+    font-weight: 400;
 }
 .feed-description img{
 margin: auto;
@@ -152,33 +160,60 @@ margin: auto;
     color: black; 
 }
 .feed-description{
-    padding-bottom: 20px;
+    padding: 0px 20px 20px 5px;
     text-align: left;
     font-family: 'Segoe UI', sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 28px;
 }
 
 .weather-wrapper{
+    width: 30%;
     display: inline-block;
     text-align: center;
-   padding: 56px 68px;
+    padding: 36px 0px;
+    margin: 36px 0px;
 }
 
 .weather-now-wrapper{
 text-align: center;
+padding: 100px 0px;
 background-color:lightgray;
-padding: 102px 68px;
+width: 450px;
+margin: auto;
+border-radius: 50%;
+margin-top: 44px;
 }
 
+.temperature{
+    font-size: 64px;
+    margin-top: -30px;
+    font-weight: 600;
+    color: #145374;
+}
+
+.temp{
+    font-size: 40px;
+    font-weight: 800;
+    color: black;
+}
+
+.weather-3{
+    padding: 30px 40px;
+    color: black;
+    border-bottom: 1px solid black;
+    margin: 0px 70px;
+}
 .weather-wrapper:hover{
-background-color:lightgray;
+background-color:#5588a3;
 cursor: default;
+border-radius: 10px;
+transform: scale(1.03);
 }
 
 .weather-image-wrapper img{
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
 }
 
 #weather{
@@ -187,6 +222,12 @@ margin: 10px 10px;
 
 }
 
+.city-name{
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    margin-top: -30px;
+}
 .weather-submit-btn{
     font-size: 23px;
     cursor: pointer;
@@ -254,6 +295,12 @@ select{
     color: black !important;
 }
 
+.transport{
+display: block;
+overflow: hidden;
+margin-top: 10px;
+text-align: center;
+}
 .transport-wrapper{
     margin: 24px;
    text-align: center;
@@ -263,29 +310,65 @@ select{
 
 .transport-type{
     margin: 0px 72px;
-    display: inline-table;
 }
 
 .transport-icon-wrapper{
-    margin: 10px 10px;
+    text-align: center;
+    margin: 0px 48px;
+    padding: 48px 84px;
+    display: inline-block;
+}
+
+.transport-icon-wrapper:hover{
+    background-color: rgb(199, 198, 198);
+    cursor: pointer;
+    border-radius: 10px;
 }
 
 .transport-text-wrapper{
-    background: darkgrey;
+    background: rgb(199, 198, 198);
     padding: 22px;
+    display: inline-block;
+    margin: 20px 20px;
     border-radius: 10px;
     margin-top: 32px;
 }
+
+.transport-text-wrapper-bus{
+    background: rgb(199, 198, 198);
+    width: 300px;
+    padding: 36px;
+    display: inline-block;
+    margin: 23px 20px;
+    border-radius: 10px;
+    margin-top: 32px;
+}
+
+.transport-text-wrapper:hover, .transport-text-wrapper-bus:hover{
+    opacity: 0.7;
+    transform: scale(1.03);
+}
 .transport-text{
-    font-size:20px;
+    font-size:32px;
     color: black;
     font-family: 'Segoe UI', sans-serif;
     font-weight: 700;
 }
+#taxi-section, #bus-section, #tram-section{
+    display: none;
+}
 
-
-@media only screen and (max-width: 1464px) {
-    body {
-     display: none;
-    }
-  }
+#taxi:hover, #bus:hover, #tram:hover{
+    transform: scale(1.03);
+    background-color: rgb(199, 198, 198) !important;
+    border-radius: 10px !important;
+}
+#transport-choose{
+    text-align: center;
+    color: black;
+}
+// @media only screen and (max-width: 1464px) {
+//     body {
+//      display: none;
+//     }
+//   }

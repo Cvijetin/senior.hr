@@ -89,25 +89,35 @@ $data2 = json_decode($response2);
 
     <?php
     echo "<div class='weather-now-wrapper'>";
-    echo "<h3>Trenutna temperatura</h3>";
+    if(isset($_POST['Osijek'])){
+        echo "<h3 class='city-name'>Osijek</h3>";
+    }elseif (isset($_POST['Zagreb'])) {
+        echo "<h3 class='city-name'>Zagreb</h3>";
+    } elseif (isset($_POST['Rijeka'])) {
+        echo "<h3 class='city-name'>Rijeka</h3>";
+    } elseif (isset($_POST['Split'])) {
+        echo "<h3 class='city-name'>Split</h3>";
+    } elseif (isset($_POST['Dubrovnik'])) {
+        echo "<h3 class='city-name'>Dubrovnik</h3>";
+    } else {
+        echo "<h3 class='city-name'>Osijek</h3>";
+    }
         foreach ($data2->weather as $vrijeme) {
             echo "<div class='weather-image-wrapper'><img src='http://openweathermap.org/img/w/" . $vrijeme->icon . ".png'></div>";
         }
-        echo "<h3>" . $data2->main->temp . "°C</h3>";
-        echo "<h5>Vlažnost zraka: " . $data2->main->humidity . " %</h5>";
-        echo "<h5>Brzina vjetra: " . $data2->wind->speed . " km/h</h5></div>";
+    echo "<h3 class='temperature'>" . $data2->main->temp . "°C</h3>";
     echo "</div>";
         ?>
-
+<h3 class="weather-3">Prognoza za svaka 3h</h3>
     <main class="center">
-    <h3>Prognoza za svaka 3h</h3>
+    
         <?php
 foreach ($data->list as $value) {
     echo "<div class='weather-wrapper'>";
         foreach ($value->weather as $vrijeme) {
             echo "<div class='weather-image-wrapper'><img src='http://openweathermap.org/img/w/" . $vrijeme->icon . ".png'></div>";
         }
-        echo "<h3>" . $value->main->temp . "°C</h3>";
+        echo "<h3 class='temp'>" . $value->main->temp . "°C</h3>";
         echo "<div class='weather-description'><h5>" . $value->dt_txt . "</h5>";
         echo "<h5>Vlažnost zraka: " . $value->main->humidity . " %</h5>";
         echo "<h5>Brzina vjetra: " . $value->wind->speed . " km/h</h5></div>";
