@@ -1,5 +1,6 @@
 @import 'layout';
 @import 'form';
+@import 'responsive';
 
 a{
     text-decoration: none !important;
@@ -42,7 +43,7 @@ h5{
 }
 
 .grey{
-    background: darkgray;
+    background: rgb(100, 100, 100);
 }
 .orange{
     background: #c18836;
@@ -91,5 +92,4 @@ h5{
 
  hr{
     border: 1px solid black;
-    margin: 5px 0px 24px 0px;
  }

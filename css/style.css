@@ -43,7 +43,7 @@ main {
 .topic-icon {
   width: 120px; }
 
-.topic-wrapper a {
+.topic-wrapper a, .health-description a {
   text-decoration: none;
   color: black; }
 
@@ -69,6 +69,7 @@ main {
 
 .feed-title {
   padding-top: 24px;
+  margin-bottom: -12px;
   text-align: left; }
 
 .icon-text {
@@ -77,7 +78,7 @@ main {
   border-radius: 5px;
   color: #e8e8e8;
   border: none;
-  height: 110px;
+  height: 76px;
   background: #145374;
   font-size: 20px;
   outline: none;
@@ -89,9 +90,8 @@ main {
   opacity: 0.5; }
 
 .news-feed-title {
-  width: 50%;
   padding: 80px;
-  margin: auto; }
+  margin: 0px 5px; }
 
 .news-feed-title:hover {
   opacity: 0.5; }
@@ -106,7 +106,7 @@ main {
   overflow: hidden;
   position: relative; }
 
-.feed-item:hover {
+.feed-item:hover, .health-item:hover {
   background-color: #e8e8e8;
   opacity: 0.8;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -195,27 +195,32 @@ main {
   margin-bottom: 30px;
   margin-top: -30px; }
 
-.weather-submit-btn {
-  font-size: 23px;
-  cursor: pointer;
-  color: white;
-  font-weight: 900;
-  background: black;
-  border: 3px solid black; }
-
-option {
-  cursor: pointer; }
-
-select {
-  outline: none;
-  cursor: pointer;
-  width: 160px;
-  font-weight: 900;
-  font-size: 25px;
-  border: 3px solid black; }
-
 .weather-description {
   margin-top: 20px; }
+
+.section-wrapper-health {
+  display: block;
+  overflow: hidden;
+  padding: 20px; }
+
+.health-item {
+  margin: 1%;
+  display: inline-block;
+  width: 48%; }
+
+.health-item:nth-child(even) {
+  float: right; }
+
+.health-description {
+  padding: 0px 20px 20px 5px;
+  text-align: left;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 400;
+  font-size: 24px; }
+
+.mojtvprogram {
+  background-color: #e8e8e8 !important;
+  font-family: 'Segoe UI', sans-serif !important; }
 
 .mojtvprogram table {
   width: auto !important; }
@@ -224,22 +229,38 @@ select {
   display: none !important; }
 
 .mojtvprogram h4 a {
-  border: 1px solid black !important;
-  padding: 24px 24px !important;
-  font-size: 26px !important;
-  color: #dfdfdf !important;
-  background: black; }
+  font-family: 'Segoe UI', sans-serif !important;
+  font-size: 20px !important;
+  color: #e8e8e8 !important;
+  padding: 24px 24px !important; }
+
+.mojtvprogram h4 a:hover {
+  border-radius: 5px !important;
+  background-color: #9b9b9b !important; }
 
 .mojtvprogram h4 {
   display: inline-block !important;
-  float: none !important; }
+  float: none !important;
+  margin: 4px !important;
+  border-bottom: none !important;
+  border-radius: 5px;
+  background: #145374 !important; }
 
 .mojtvprogrammenu {
-  margin-top: 24px;
-  text-align: center; }
+  display: block;
+  padding-top: 5px;
+  text-align: center;
+  margin: auto;
+  position: relative; }
+
+td.mojtvtitle, .mojtvtitle a, strong, .emisije, td a {
+  background-color: #e8e8e8 !important; }
 
 .mojtvprogram table {
   margin: 44px 0px 0px 24px !important; }
+
+.mojtvprogram td.mojtvtime {
+  background: #9b9b9b !important; }
 
 .mojtvprogram td {
   padding: 24px 32px !important;
@@ -247,8 +268,15 @@ select {
   font-size: 24px; }
 
 .tvopen a {
-  background: white !important;
-  color: black !important; }
+  color: black !important;
+  border-radius: 5px !important; }
+
+.tvopen a:hover {
+  transform: scale(1.03); }
+
+.mojtvprogram td.mojtvtitle a.film {
+  color: black !important;
+  border-bottom: 1px solid black !important; }
 
 .transport {
   display: block;
@@ -329,13 +357,14 @@ label {
   padding: 12px 12px 12px 0;
   display: inline-block;
   font-weight: 800;
+  color: #145374;
   font-size: 22px;
   font-family: 'Segoe UI', sans-serif; }
 
 /* Style the submit button */
 .form-submit {
-  background-color: black;
-  color: white;
+  background-color: #145374;
+  color: #e8e8e8;
   padding: 22px 34px;
   border: none;
   font-weight: 800;
@@ -348,7 +377,7 @@ label {
 /* Style the container */
 .container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #e8e8e8 !important;
   padding: 20px; }
 
 /* Floating column for labels: 25% width */
@@ -377,6 +406,177 @@ label {
   .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0; } }
+@media (min-width: 750px) and (max-width: 1200px) {
+  .feed-item {
+    width: 40%; }
+
+  .icon-text {
+    height: 50px;
+    width: 100px;
+    font-size: 10px; }
+
+  .feed-item-image {
+    min-height: 200px;
+    max-height: 200px; }
+
+  h3, .feed-item-text {
+    font-size: 20px !important; }
+
+  h2 {
+    font-size: 24px !important; }
+
+  h1 {
+    font-size: 36px !important; }
+
+  h5 {
+    font-size: 18px !important; }
+
+  .feed-description {
+    font-size: 18px; }
+
+  .weather-now-wrapper {
+    width: 250px;
+    padding: 46px 0px; }
+
+  .weather-wrapper {
+    padding: 12px 0px;
+    margin: 12px 0px; }
+
+  .transport-icon-wrapper {
+    margin: 0px;
+    padding: 0px 40px; }
+
+  .topic-icon {
+    width: 80px; }
+
+  .health-description {
+    font-size: 18px; } }
+@media (min-width: 0px) and (max-width: 750px) {
+  .topic-icon-wrapper {
+    padding: 0px;
+    margin: 0%; }
+
+  h1 {
+    font-size: 28px !important; }
+
+  h2 {
+    font-size: 20px !important; }
+
+  h3 {
+    font-size: 16px !important; }
+
+  h4 {
+    font-size: 20px !important; }
+
+  h5 {
+    font-size: 10px !important; }
+
+  hr {
+    margin-top: 12px; }
+
+  .feed-item {
+    width: 100%;
+    margin: 0px 0px 10px 0px; }
+
+  .feed-description {
+    font-size: 16px;
+    padding: 2px; }
+
+  .feed-item-text {
+    font-size: 16px; }
+
+  .feed-item-image {
+    min-height: 180px;
+    max-height: 180px; }
+
+  .news-feed-title {
+    padding: 35px; }
+
+  .inline-left {
+    padding-top: 2px !important; }
+
+  .icon-text {
+    height: 32px;
+    font-weight: 400px;
+    font-size: 12px;
+    margin-top: 5px !important; }
+
+  .topic-icon {
+    width: 60px; }
+
+  .news-topic-icon {
+    width: 45%; }
+
+  .city-name {
+    margin-bottom: 0px; }
+
+  .weather-now-wrapper {
+    padding: 50px;
+    width: 72px; }
+
+  .weather-wrapper {
+    width: 50%;
+    padding: 4px 0px;
+    margin: 12px 0px; }
+
+  .weather-image-wrapper img {
+    width: 70px;
+    height: 70px; }
+
+  .weather-3 {
+    padding: 20px 0px 0px 0px;
+    margin: 0px 24px; }
+
+  .transport-icon-wrapper {
+    margin: 0px;
+    padding: 5px; }
+
+  .transport-type {
+    margin: 0px; }
+
+  .transport-text {
+    font-size: 16px; }
+
+  .transport-text-wrapper {
+    margin: 4px 0px;
+    width: 200px; }
+
+  .transport-text-wrapper-bus {
+    width: 160px;
+    margin: 4px 0px; }
+
+  .health-item {
+    margin-bottom: 5px;
+    width: 100%; }
+
+  .health-description {
+    padding: 0px 20px 20px 0px;
+    font-size: 12px; }
+
+  .section-wrapper-health {
+    padding: 8px; }
+
+  .health-item:nth-child(even) {
+    float: none; }
+
+  .mojtvprogram h4 {
+    width: 45%;
+    margin: 1px !important; }
+
+  .mojtvprogram h4 a {
+    padding: 12px !important;
+    font-size: 12px !important; }
+
+  .mojtvprogram table {
+    margin: 0 !important; }
+
+  .mojtvprogram td {
+    padding: 16px 12px !important;
+    border-bottom: 1px solid black !important;
+    font-size: 14px; }
+
+  .header-background-news {
+    padding: 0px 20px; } }
 a {
   text-decoration: none !important; }
 
@@ -412,7 +612,7 @@ h5 {
   background: #a03337; }
 
 .grey {
-  background: darkgray; }
+  background: #646464; }
 
 .orange {
   background: #c18836; }
@@ -454,7 +654,6 @@ h5 {
   border-radius: 50%; }
 
 hr {
-  border: 1px solid black;
-  margin: 5px 0px 24px 0px; }
+  border: 1px solid black; }
 
 /*# sourceMappingURL=style.css.map */

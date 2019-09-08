@@ -16,56 +16,56 @@
     <main class="index-layout">
         <section class="section-wrapper">
             <div class="topic-wrapper left">
-                <a href="news/landing.php">
-                    <div class="topic-icon-wrapper">
+                <div class="topic-icon-wrapper">
+                    <a href="news/landing.php">
                         <img src="assets/news.svg" class="topic-icon" alt="Vijesti">
                         <h2>Vijesti</h2>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
             <div class="topic-wrapper right">
-                <a href="weather/weather.php">
-                    <div class="topic-icon-wrapper">
+                <div class="topic-icon-wrapper">
+                    <a href="weather/weather.php">
                         <img src="assets/weather.svg" class="topic-icon" alt="Vrijeme">
                         <h2>Vrijeme</h2>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </section>
         <section class="section-wrapper">
             <div class="topic-wrapper left">
-                <a href="transport.php">
-                    <div class="topic-icon-wrapper">
+                <div class="topic-icon-wrapper">
+                    <a href="transport.php">
                         <img src="assets/taxi.svg" class="topic-icon" alt="Prijevoz">
                         <h2>Prijevoz</h2>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
             <div class="topic-wrapper right">
-                <a href="health.php">
-                    <div class="topic-icon-wrapper">
+                <div class="topic-icon-wrapper">
+                    <a href="health.php">
                         <img src="assets/health.svg" class="topic-icon" alt="Zdravlje">
                         <h2>Zdravlje</h2>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </section>
         <section class="section-wrapper">
             <div class="topic-wrapper left">
-                <a href="tvProgram.php">
-                    <div class="topic-icon-wrapper">
+                <div class="topic-icon-wrapper">
+                    <a href="tvProgram.php">
                         <img src="assets/tv.svg" class="topic-icon" alt="TV">
                         <h2>TV program</h2>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
             <div class="topic-wrapper right">
-                <a href="form.php">
-                    <div class="topic-icon-wrapper">
+                <div class="topic-icon-wrapper">
+                    <a href="form.php">
                         <img src="assets/suggestion.svg" class="topic-icon" alt="Prijedlozi">
                         <h2>Prijedlozi</h2>
-                    </div>
-                </a>
+                    </a>
+                </div>
             </div>
         </section>
     </main>

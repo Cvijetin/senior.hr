@@ -58,12 +58,11 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
     if ($max_item_cnt > count($feed)) {
         $max_item_cnt = count($feed);
     }
-    $result .= '<section class="section-wrapper">';
+    $result .= '<section class="section-wrapper-health">';
     for ($x=0;$x<$max_item_cnt;$x++) {
         $title = str_replace(' & ', ' &amp; ', $feed[$x]['title']);
         $link = $feed[$x]['link'];
-        $result .= '<div class="feed-item border">';
-        $result .= '<div class="feed-title"><h3><a href="'.$link.'" title="'.$title.'" target="_blank">'.$title.'</a></h3></div>';
+        $result .= '<div class="health-item border">';
         // if ($show_date) {
         //     $date = date('F d, Y', strtotime($feed[$x]['date']));
         //     $result .= '<small class="feed-date"><em> '.$date.'</em></small>';
@@ -95,7 +94,7 @@ function get_rss_feed_as_html($feed_url, $max_item_cnt = 10, $show_date = true, 
             // if ($has_image == 1) {
             //     $description = '<a href="'.$link.'" title="'.$title.'" target="_blank"><img class="feed-item-image" src="' . $image['src'] . '" />' . '<p class="feed-item-text">'. $description . '</p></a>';
             // }
-            $result .= '<a href="'.$link.'" title="'.$title.'" target="_blank"><div class="feed-description">' . $description . '</a>';
+            $result .= '<a href="'.$link.'" target="_blank"><h3>' . $title . '</h3><div class="health-description">' . $description . '</a>';
             $result .= '</div>';
         }
         $result .= '</div>';

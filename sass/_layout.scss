@@ -53,7 +53,7 @@ main{
 }
 
 
-.topic-wrapper a{
+.topic-wrapper a, .health-description a {
     text-decoration: none;
     color: black;
 }
@@ -82,6 +82,7 @@ padding: 0px 5px;
 }
 .feed-title{
     padding-top: 24px;
+    margin-bottom: -12px;
     text-align: left;
 }
 
@@ -91,7 +92,7 @@ padding: 0px 5px;
     border-radius: 5px;
     color: #e8e8e8;
     border: none;
-    height: 110px;
+    height: 76px;
     background: #145374;
     font-size: 20px;
     outline: none;
@@ -106,9 +107,8 @@ padding: 0px 5px;
 }
 
 .news-feed-title{
-    width: 50%;
     padding: 80px;
-    margin: auto;
+    margin: 0px 5px;
 }
 
 .news-feed-title:hover{
@@ -126,7 +126,7 @@ padding: 0px 5px;
     position: relative;
 }
 
-.feed-item:hover{
+.feed-item:hover, .health-item:hover{
   background-color: #e8e8e8;
    opacity: 0.8;
    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -228,29 +228,40 @@ margin: 10px 10px;
     margin-bottom: 30px;
     margin-top: -30px;
 }
-.weather-submit-btn{
-    font-size: 23px;
-    cursor: pointer;
-    color: white;
-    font-weight: 900;
-    background: black;
-    border: 3px solid black;
-}
-
-option{
-    cursor: pointer;
-}
-select{
-    outline: none;
-    cursor: pointer;
-    width: 160px;
-    font-weight: 900;
-    font-size: 25px;
-    border: 3px solid black;
-}
 
 .weather-description{
     margin-top: 20px;
+}
+
+.section-wrapper-health{
+    display: block;
+    overflow: hidden;
+    padding: 20px;
+
+}
+
+.health-item{
+    margin: 1%;
+    display: inline-block;
+    width: 48%;
+}
+
+.health-item:nth-child(even){
+    float: right;
+}
+
+
+.health-description{
+    padding: 0px 20px 20px 5px;
+    text-align: left;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.mojtvprogram{
+background-color: #e8e8e8 !important;
+font-family: 'Segoe UI', sans-serif !important;
 }
 
 .mojtvprogram table {
@@ -263,26 +274,43 @@ select{
 }
 
 .mojtvprogram h4 a {
-   
-    border: 1px solid black !important;
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 20px !important;
+    color: #e8e8e8 !important;
     padding: 24px 24px !important;
-    font-size: 26px !important;
-    color: #dfdfdf !important;
-    background: black;
 }
+
+.mojtvprogram h4 a:hover{
+    border-radius: 5px !important;
+    background-color: #9b9b9b !important;
+} 
 
 .mojtvprogram h4{
     display: inline-block !important;
     float: none !important;
+    margin: 4px !important;
+    border-bottom: none !important;
+    border-radius: 5px;
+    background: #145374 !important;
 }
 .mojtvprogrammenu{
-    margin-top: 24px;
+    display: block;
+    padding-top: 5px;
     text-align: center;
+    margin: auto;
+    position: relative;
+}
+
+td.mojtvtitle, .mojtvtitle a, strong, .emisije, td a{
+    background-color: #e8e8e8 !important;
 }
 
 .mojtvprogram table {
     margin: 44px 0px 0px 24px !important;
+}
 
+.mojtvprogram td.mojtvtime{
+    background: #9b9b9b !important;
 }
 
 .mojtvprogram td{
@@ -291,8 +319,17 @@ select{
     font-size: 24px;
 }
 .tvopen a{
-    background: white !important;
     color: black !important;
+    border-radius: 5px !important;
+}
+
+.tvopen a:hover{
+transform: scale(1.03);
+}
+
+.mojtvprogram td.mojtvtitle a.film{
+    color: black !important;
+    border-bottom: 1px solid black !important;
 }
 
 .transport{
@@ -367,8 +404,4 @@ text-align: center;
     text-align: center;
     color: black;
 }
-// @media only screen and (max-width: 1464px) {
-//     body {
-//      display: none;
-//     }
-//   }
+

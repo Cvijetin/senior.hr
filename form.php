@@ -49,7 +49,7 @@
             </div>
             <div class="row">
                 <div class="col-25">
-                    <label for="title">Naslov poruke:</label>
+                    <label for="title">Poruka:</label>
                 </div>
                 <div class="col-75">
                     <textarea id="message" name="message" placeholder="Ovdje napišite tekst poruke.."
