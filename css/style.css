@@ -60,7 +60,7 @@ main {
 
 .topic-icon {
   color: black;
-  padding: 5px 5px;
+  padding: 10px 80px;
   font-size: 50px; }
 
 .feed-title a {
@@ -447,14 +447,21 @@ label {
     padding: 0px 40px; }
 
   .topic-icon {
-    width: 80px; }
+    width: 130px;
+    padding: 10px 0px; }
 
   .health-description {
-    font-size: 18px; } }
+    font-size: 18px; }
+
+  .section-wrapper {
+    padding-top: 34px; } }
 @media (min-width: 0px) and (max-width: 750px) {
   .topic-icon-wrapper {
     padding: 0px;
     margin: 0%; }
+
+  main {
+    margin: 0px 10px; }
 
   h1 {
     font-size: 28px !important; }
@@ -476,7 +483,7 @@ label {
 
   .feed-item {
     width: 100%;
-    margin: 0px 0px 10px 0px; }
+    margin: 0px 0px 20px 0px; }
 
   .feed-description {
     font-size: 16px;
@@ -496,13 +503,14 @@ label {
     padding-top: 2px !important; }
 
   .icon-text {
-    height: 32px;
+    height: 60px;
     font-weight: 400px;
     font-size: 12px;
     margin-top: 5px !important; }
 
   .topic-icon {
-    width: 60px; }
+    width: 80px;
+    padding: 10px 10px; }
 
   .news-topic-icon {
     width: 45%; }
@@ -546,15 +554,15 @@ label {
     margin: 4px 0px; }
 
   .health-item {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     width: 100%; }
 
   .health-description {
     padding: 0px 20px 20px 0px;
-    font-size: 12px; }
+    font-size: 16px; }
 
   .section-wrapper-health {
-    padding: 8px; }
+    padding: 0px; }
 
   .health-item:nth-child(even) {
     float: none; }
@@ -576,7 +584,10 @@ label {
     font-size: 14px; }
 
   .header-background-news {
-    padding: 0px 20px; } }
+    padding: 0px 20px; }
+
+  .section-wrapper {
+    padding-top: 34px; } }
 a {
   text-decoration: none !important; }
 
