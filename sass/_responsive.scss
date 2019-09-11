@@ -138,8 +138,8 @@ h5{
     }
 
     .weather-now-wrapper{
-        padding: 50px;
-        width: 72px;
+        padding: 52px;
+    width: 80px;
     }
     .weather-wrapper{
         width: 50%;
@@ -154,6 +154,12 @@ h5{
     .weather-3 {
         padding: 20px 0px 0px 0px;
         margin: 0px 24px;
+    }
+
+    .temperature{
+        font-size: 20px !important;
+    margin-top: -20px;
+    font-weight: 900;
     }
 
     .transport-icon-wrapper {
@@ -200,8 +206,11 @@ h5{
         margin: 1px !important;
     }
 
+    .mojtvprogrammenu{
+        margin-bottom: 15px !important;
+    }
     .mojtvprogram h4 a {
-        padding: 12px !important;
+        padding: 20px !important;
         font-size: 12px !important;
     }
 

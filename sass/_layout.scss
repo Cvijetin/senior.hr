@@ -24,7 +24,6 @@ main{
 
 .section-wrapper {
     display: block;
-    padding-top: 10px;
     text-align: center;
     overflow: hidden;
 }
@@ -34,6 +33,7 @@ main{
     display: inline;
     text-align: center;
     position: relative;
+    padding-top: 10px;
 }
 
 .topic-icon-wrapper{
